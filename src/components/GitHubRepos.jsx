@@ -6,25 +6,32 @@ import { profile } from '../data/profile'
 
 const CURATED = [
   {
+    name: 'reachinbox-email-scheduler',
+    title: 'ReachInbox Email Scheduler',
+    description:
+      'Distributed task scheduling platform — BullMQ delayed queues, Redis sliding-window rate limiting (50/hr), and Elasticsearch full-text search.',
+    tags: ['TypeScript', 'BullMQ', 'Redis', 'Docker'],
+  },
+  {
     name: 'sru-assist',
     title: 'SRU College AI Assistant',
     description:
-      'RAG-powered chatbot that answers admissions, hostel, and academics queries straight from SR University’s knowledge base — vector search + LLM, served through a fast API.',
-    tags: ['Python', 'RAG', 'LangChain', 'Vector DB'],
+      'RAG-powered chatbot that answers admissions, hostel, and academics queries straight from SR University’s guidelines — vector search + BM25, served through a fast API.',
+    tags: ['Python', 'RAG', 'LangChain', 'BM25'],
   },
   {
     name: 'smart-disaster-relief-system',
     title: 'Smart Disaster Relief System',
     description:
-      'IoT + drone-based flood analysis and relief-coordination platform — live sensor telemetry, affected-area mapping, and automated aid routing.',
-    tags: ['HTML/CSS/JS', 'IoT', 'Drones', 'GIS'],
+      'Full-stack disaster management web application with Flask, SQLite, and OpenStreetMap geolocation for automated relief routing across 20+ camps.',
+    tags: ['Flask', 'SQLite', 'Leaflet.js', 'OpenStreetMap'],
   },
   {
     name: 'AI-Code-Debugger',
     title: 'AI Code Debugger',
     description:
-      'Static-analysis tool that inspects Python for common bugs and style violations, then suggests precise fixes with explanations.',
-    tags: ['Python', 'Static Analysis', 'Parsing'],
+      'Static-analysis and ML-powered debugging assistant that inspects Python source code for errors and suggests precise, plain-English fixes with explanations.',
+    tags: ['Python', 'AST', 'NLP', 'Parsing'],
   },
   {
     name: 'Generative-AI-2025',
@@ -39,13 +46,6 @@ const CURATED = [
     description:
       'Notebook-driven study of AI coding assistants: generating, reviewing, and refactoring real-world code with copilots.',
     tags: ['Python', 'Jupyter', 'CodeGen'],
-  },
-  {
-    name: 'food-delivery',
-    title: 'Food Delivery Platform',
-    description:
-      'Full-featured food-delivery app — restaurant browsing, cart, and order flow built with modern JavaScript.',
-    tags: ['JavaScript', 'ES6+', 'UI/UX'],
   },
 ]
 

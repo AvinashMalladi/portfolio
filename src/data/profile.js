@@ -11,7 +11,7 @@ export const profile = {
   tagline:
     'I build reliable, scalable software — from REST APIs and real-time dashboards to agentic AI systems — and ship it to the cloud.',
   summary:
-    'B.Tech Computer Science student with hands-on experience building web applications, backend systems, REST APIs, and database-driven solutions using Python, JavaScript, SQL, Flask, MySQL, and SQLite. Experienced with Git, Docker, GitHub Actions, AWS, CI/CD, testing, and technical documentation, with projects spanning API-driven applications, real-time dashboards, debugging tools, and AI-powered software. Focused on software engineering, backend development, full-stack technologies, cloud platforms, and building reliable, scalable applications.',
+    'B.Tech Computer Science student with hands-on experience architecting distributed backend systems, asynchronous task queues, RESTful APIs, and database-driven platforms using TypeScript, Node.js, Express, Python, PostgreSQL, and Redis. Experienced with BullMQ queues, Docker containerization, GitHub Actions, AWS, CI/CD, and full-text search with Elasticsearch. Focused on software engineering, backend architecture, scalable microservices, and distributed data platforms.',
   email: 'malladiavinash3@gmail.com',
   emailHref: 'mailto:malladiavinash3@gmail.com',
   phone: '+91 62818 55895',
@@ -25,7 +25,7 @@ export const profile = {
     credly: 'https://www.credly.com/users/malladi-avinash',
   },
   stats: [
-    { value: '4+', label: 'Projects Built' },
+    { value: '5+', label: 'Projects Built' },
     { value: '4', label: 'Certifications' },
     { value: '1', label: 'IEEE Research Paper' },
     { value: '8.6', label: 'B.Tech CGPA' },
@@ -37,25 +37,25 @@ export const skills = [
     category: 'Programming Languages',
     icon: 'code',
     accent: 'from-indigo-500 to-violet-500',
-    items: ['Python', 'JavaScript', 'TypeScript', 'SQL', 'C'],
+    items: ['Python', 'JavaScript', 'TypeScript', 'C++', 'C', 'SQL'],
   },
   {
-    category: 'Backend & APIs',
+    category: 'Backend & Systems',
     icon: 'server',
     accent: 'from-violet-500 to-purple-500',
-    items: ['Node.js', 'Express.js', 'Flask', 'REST APIs', 'API Design', 'OOP'],
+    items: ['Node.js', 'Express.js', 'BullMQ', 'Redis', 'REST APIs', 'Rate Limiting', 'Flask', 'OOP'],
   },
   {
-    category: 'Frontend',
+    category: 'Frontend & Web',
     icon: 'layout',
     accent: 'from-sky-500 to-cyan-400',
-    items: ['React.js', 'HTML', 'CSS', 'JavaScript', 'Leaflet.js', 'Chart.js'],
+    items: ['React.js', 'Tailwind CSS', 'HTML5', 'CSS3', 'Leaflet.js', 'Chart.js'],
   },
   {
-    category: 'Databases & Web',
+    category: 'Databases & Search',
     icon: 'database',
     accent: 'from-emerald-500 to-teal-400',
-    items: ['MySQL', 'SQLite'],
+    items: ['PostgreSQL', 'MySQL', 'SQLite', 'Elasticsearch', 'Redis Caching'],
   },
   {
     category: 'Software Engineering',
@@ -113,39 +113,30 @@ export const skills = [
 
 export const projects = [
   {
-    title: 'Smart Disaster Relief System',
-    tagline: 'Intelligent resource allocation for disaster response.',
+    title: 'ReachInbox — Distributed Job Scheduler',
+    featured: true,
+    tagline: 'High-throughput asynchronous task queue with multi-instance rate limiting.',
     description:
-      'A disaster management web platform that connects reports, relief camps, and victims through backend-driven workflows — turning chaos into coordinated, resource-aware relief.',
+      'An event-driven distributed task scheduling platform in TypeScript, Node.js, and Express — decoupling batch ingestion from execution to process delayed email campaigns with sub-50ms queue latency using BullMQ and Redis.',
     bullets: [
-      'Built a Flask + SQLite web application managing disaster reports, relief camps, resources, and victim allocation through backend-driven workflows.',
-      'Implemented risk classification, geolocation, resource-aware allocation, and nearest-camp detection using OpenStreetMap Nominatim with rule-based decision logic.',
-      'Created a real-time monitoring dashboard with JavaScript, Leaflet.js, Chart.js, and heatmaps — periodic backend polling, risk alerts, geolocation, and map-based routing.',
+      'Architected an email scheduling service in TypeScript, Node.js, and Express, accepting CSV/TXT batch uploads up to 5k recipients with BullMQ queues and Redis.',
+      'Implemented multi-instance rate limiting with Redis sliding-window counters (capping 50 emails/hr per sender, 200 global limit), sending Slack alerts and rolling burst overflows into subsequent hours to achieve 100% execution reliability without dropped jobs.',
+      'Integrated Elasticsearch for sub-10ms full-text search with PostgreSQL fallback, and Google OAuth 2.0 authentication; fully containerized with Docker.',
     ],
-    tech: ['Flask', 'SQLite', 'JavaScript', 'Leaflet.js', 'Chart.js', 'OpenStreetMap'],
+    tech: ['TypeScript', 'Node.js', 'Express', 'BullMQ', 'Redis', 'PostgreSQL', 'Elasticsearch', 'Docker'],
     impact: [
-      'Real-time disaster monitoring & routing',
-      'Rule-based risk classification',
-      'Resource-aware victim allocation',
+      '100% execution reliability (50/hr limit)',
+      'Sub-50ms BullMQ queue latency',
+      'Sub-10ms full-text search with SQL fallback',
     ],
-    icon: 'life-buoy',
-    accent: 'from-sky-500 to-indigo-500',
-    links: [],
-  },
-  {
-    title: 'AI Code Debugger',
-    tagline: 'ML + NLP powered debugging assistant for Python.',
-    description:
-      'An AI-assisted debugging application that reads Python source code and pinpoints syntax, runtime, and logical errors — with plain-English explanations and fixes.',
-    bullets: [
-      'Developed an AI-assisted Python debugging application that analyzes source code to identify syntax, runtime, and logical errors.',
-      'Implemented automated error classification, explanations, and debugging suggestions using Python code parsing, machine learning, and NLP techniques.',
+    icon: 'mail',
+    accent: 'from-amber-500 to-red-500',
+    links: [
+      {
+        label: 'GitHub Repo',
+        href: 'https://github.com/AvinashMalladi/reachinbox-email-scheduler',
+      },
     ],
-    tech: ['Python', 'Code Parsing', 'Machine Learning', 'NLP'],
-    impact: ['Automated error classification', 'Actionable fix suggestions', 'Plain-English explanations'],
-    icon: 'bug',
-    accent: 'from-emerald-500 to-teal-400',
-    links: [],
   },
   {
     title: 'SR University AI Assistant — Agentic RAG Chatbot',
@@ -160,13 +151,64 @@ export const projects = [
       'Created a golden Q&A evaluation framework measuring Hit Rate and MRR; containerized with Docker for CI/CD-ready automated evaluation.',
     ],
     tech: ['RAG', 'BM25', 'LangChain', 'Agentic AI', 'Python', 'Docker', 'CI/CD'],
-    impact: ['98% efficient retrieval via BM25 pipeline', 'Page-level citations', 'Hit Rate & MRR evaluation'],
+    impact: ['89% hit rate via BM25 pipeline', 'Page-level citations', 'Hit Rate & MRR evaluation'],
     icon: 'bot',
     accent: 'from-violet-500 to-fuchsia-500',
-    links: [],
+    links: [
+      {
+        label: 'GitHub Repo',
+        href: 'https://github.com/AvinashMalladi/sru-assist',
+      },
+    ],
+  },
+  {
+    title: 'Smart Disaster Relief System',
+    tagline: 'Intelligent resource allocation for disaster response.',
+    description:
+      'A disaster management web platform that connects reports, relief camps, and victims through backend-driven workflows — turning chaos into coordinated, resource-aware relief.',
+    bullets: [
+      'Built a Flask + SQLite web application managing disaster reports, relief camps, resources, and victim allocation through backend-driven workflows.',
+      'Implemented risk classification, geolocation, resource-aware allocation, and nearest-camp detection using OpenStreetMap Nominatim with rule-based decision logic.',
+      'Created a real-time monitoring dashboard with JavaScript, Leaflet.js, Chart.js, and heatmaps — periodic backend polling, risk alerts, geolocation, and map-based routing.',
+    ],
+    tech: ['Flask', 'SQLite', 'JavaScript', 'Leaflet.js', 'Chart.js', 'OpenStreetMap'],
+    impact: [
+      'Real-time disaster monitoring & routing',
+      '35% reduction in dispatch response time',
+      'Resource-aware victim allocation across 20+ camps',
+    ],
+    icon: 'life-buoy',
+    accent: 'from-sky-500 to-indigo-500',
+    links: [
+      {
+        label: 'GitHub Repo',
+        href: 'https://github.com/AvinashMalladi/smart-disaster-relief-system',
+      },
+    ],
+  },
+  {
+    title: 'AI Code Debugger',
+    tagline: 'ML + NLP powered debugging assistant for Python.',
+    description:
+      'An AI-assisted debugging application that reads Python source code and pinpoints syntax, runtime, and logical errors — with plain-English explanations and fixes.',
+    bullets: [
+      'Developed an AI-assisted Python debugging application that analyzes source code to identify syntax, runtime, and logical errors.',
+      'Implemented automated error classification, explanations, and debugging suggestions using Python code parsing, machine learning, and NLP techniques.',
+    ],
+    tech: ['Python', 'Code Parsing', 'Machine Learning', 'NLP'],
+    impact: ['Automated error classification', 'Actionable fix suggestions', 'Plain-English explanations'],
+    icon: 'bug',
+    accent: 'from-emerald-500 to-teal-400',
+    links: [
+      {
+        label: 'GitHub Repo',
+        href: 'https://github.com/AvinashMalladi/AI-Code-Debugger',
+      },
+    ],
   },
   {
     title: 'Explainable AI Lung Cancer Prediction',
+    featured: true,
     tagline: 'IEEE ICICCS 2026 research paper — co-authored & presented.',
     description:
       'A multi-model explainable ML study for lung cancer prediction, benchmarked across classifiers with 98% accuracy and interpreted with SHAP, LIME, PDP, and ICE.',
@@ -175,7 +217,7 @@ export const projects = [
       'Evaluated multiple ML models achieving 98% accuracy using XGBoost; applied SHAP, LIME, PDP, and ICE for model interpretation.',
     ],
     tech: ['Python', 'XGBoost', 'Scikit-learn', 'SHAP', 'LIME', 'PDP', 'ICE'],
-    impact: ['98% accuracy (XGBoost)', 'IEEE conference presentation', 'Full model explainability'],
+    impact: ['98% accuracy (XGBoost)', 'IEEE conference presentation', 'Full model explainability (SHAP & LIME)'],
     icon: 'brain-circuit',
     accent: 'from-rose-500 to-orange-400',
     links: [

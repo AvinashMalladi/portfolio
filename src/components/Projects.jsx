@@ -6,6 +6,7 @@ import {
   Bug,
   Check,
   ExternalLink,
+  Mail,
   Radar,
   Sparkles,
   Star,
@@ -15,7 +16,7 @@ import SectionHeading from './SectionHeading'
 import { getLenis } from '../lib/scroll'
 import { projects } from '../data/profile'
 
-const COVER_ICONS = [Radar, Bug, Boxes, BrainCircuit]
+const COVER_ICONS = [Mail, Boxes, Radar, Bug, BrainCircuit]
 
 const MOTIFS = [
   {
