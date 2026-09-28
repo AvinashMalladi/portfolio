@@ -1,16 +1,46 @@
-# React + Vite
+# Avinash Malladi — Software Engineer Portfolio
 
-This template provides a minimal setup to get React working in Vite with HMR and some Oxlint rules.
+Live portfolio showcasing distributed backend systems, full-stack applications, and agentic AI systems.
 
-Currently, two official plugins are available:
+## Live Deployments
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+- **Vercel (Primary):** [https://portfolio-iota-silk-2wf2n78yig.vercel.app/](https://portfolio-iota-silk-2wf2n78yig.vercel.app/)
+- **GitHub Pages (Mirror):** [https://avinashmalladi.github.io/portfolio/](https://avinashmalladi.github.io/portfolio/)
 
-## React Compiler
+---
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+## Tech Stack
 
-## Expanding the Oxlint configuration
+- **Framework:** React 19 + Vite
+- **Styling:** Tailwind CSS v4
+- **Animations:** Framer Motion
+- **Smooth Scroll:** Lenis
+- **Icons:** Lucide React
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and Oxlint's TypeScript related rules in your project.
+---
+
+## Featured Projects
+
+1. **ReachInbox — Distributed Job Scheduler** (TypeScript, BullMQ, Redis, PostgreSQL, Elasticsearch, Docker)
+2. **SR University AI Assistant — Agentic RAG Chatbot** (Python, LangChain, BM25, Docker)
+3. **Smart Disaster Relief System** (Flask, SQLite, Leaflet.js, OpenStreetMap)
+4. **AI Code Debugger** (Python, Static Analysis, AST, NLP)
+5. **Explainable AI Lung Cancer Prediction** (XGBoost, SHAP, LIME, IEEE ICICCS 2026)
+
+---
+
+## Local Development
+
+```bash
+# Install dependencies
+npm install
+
+# Start development server
+npm run dev
+
+# Build for production
+npm run build
+
+# Deploy to GitHub Pages
+npm run deploy
+```
