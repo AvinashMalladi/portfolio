@@ -18,7 +18,7 @@ export const profile = {
   phoneHref: 'tel:+916281855895',
   location: 'Warangal, Telangana, India',
   university: 'SR University, Warangal',
-  resume: 'resume.pdf',
+  resume: `${import.meta.env.BASE_URL}resume.pdf`,
   links: {
     linkedin: 'https://www.linkedin.com/in/malladi-avinash-ba8727286',
     github: 'https://github.com/AvinashMalladi',
@@ -279,8 +279,8 @@ export const experience = [
 
 export const certifications = [
   {
-    title: 'Amazon Certified Cloud Practitioner',
-    issuer: 'Amazon Skill Builder',
+    title: 'AWS Certified Cloud Practitioner',
+    issuer: 'Amazon Web Services (AWS)',
     date: 'May 2026',
     verify: 'https://drive.google.com/file/d/1nKLioaQHcaSvBPXY4yATe7Gv0fUjQHA9/view?usp=sharing',
     icon: 'cloud',
@@ -289,8 +289,8 @@ export const certifications = [
   {
     title: 'Microsoft Azure AI Fundamentals (AI-900)',
     issuer: 'Microsoft',
-    date: 'Aug 2025',
-    verify: 'https://www.credly.com/badges/4f39d969-5fd7-4ffd-9d44-4778f1463fdf/public_url',
+    date: 'Sep 2025',
+    verify: 'https://drive.google.com/file/d/1hqBzRAA99ltZJ3XD7LeaMrjWMAYumpxU/view?usp=sharing',
     icon: 'cpu',
     accent: 'from-sky-500 to-blue-500',
   },
@@ -306,7 +306,7 @@ export const certifications = [
     title: 'Python Full Stack',
     issuer: 'EduSkills',
     date: 'Dec 2024',
-    verify: 'https://drive.google.com/file/d/1hqBzRAA99ltZJ3XD7LeaMrjWMAYumpxU/view?usp=drive_link',
+    verify: 'https://drive.google.com/drive/folders/1E-PRWaxySqgMzXV93IS-vmjIzdAyyHH-?usp=sharing',
     icon: 'code-2',
     accent: 'from-indigo-500 to-violet-500',
   },
